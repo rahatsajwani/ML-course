@@ -1,0 +1,11 @@
+How I Built My Model:
+
+The model is built around predicting the outcome variable, classe, which has 5 possible levels where A represents that the participant performed the exercise correctly, and then B-E are different ways that they performed the exercise incorrectly. I will choose the model that maximizes the accuracy and minimizes the out-of-sample error. I will use all variables in the dataset that are available after cleaning the data for blanks and NAs. I will test both the decision tree and Random Forest machine learning algorithms and select the model with the highest accuracy for the final model.
+
+How I Used Cross-Validation:
+
+Because our sample size is large with n= 19,622 in training data set, I cross-validated the data by randomly separating the training set data without replacement into two sub-sample groups: 60% of the data was used for the sub-training set, 40% was held out for sub-testing. The original testing data was not looked at or used while working on either sub-sample group in the training set. My model will be fitted to the sub-training set data, and then tested on the sub-testing data. When I am able to select between the Random Forest or Decision Tree model for which maximized accuracy, I will then test the model on the original testing data set. 
+
+What I Expect the Out-of-Sample Error to Be:
+
+I expect the out-of-sample error to correspond with the value equal to 1 - the accuracy percentage of the cross-validation data because our outcome variable, classe, is an unordered factor variable. Accuracy tells us the probability that we correctly classified or identified an observation out of the total sample in the sub-testing data set. However, out-of-sample error is based on the original testing data, so the out-of-sample error will correspond to the expected number of misidentified or misclassified observations out of the total observations in the original testing data set. 
